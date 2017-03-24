@@ -33,7 +33,8 @@ int main() {
 		cin >> location;
 
 		//make sure the user entered a possible location! board[10] doesn't exist does it?!
-		if (location >= 0 && location<9) {
+		//Make sure the player doesn't overwrite the other player's piece either!
+		if (location >= 0 && location<9 && board[location] == '-') {
 			//save the piece into the proper location
 			board[location] = currentPlayer;
 			//draw the board and switch players.
